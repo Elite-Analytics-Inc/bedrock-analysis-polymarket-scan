@@ -1,0 +1,16 @@
+{
+  "analysis_name": "polymarket-scan",
+  "namespace": "predictions",
+  "inputs": ["bedrock.predictions.polymarket_orderbook"],
+  "params_schema": {
+    "log_every": {
+      "type": "integer",
+      "default": 1000000,
+      "description": "Emit a progress checkpoint every N rows"
+    }
+  },
+  "resources": {
+    "requests": {"cpu": "4", "memory": "4Gi"},
+    "limits":   {"cpu": "4", "memory": "4Gi"}
+  }
+}
