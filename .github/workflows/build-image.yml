@@ -30,6 +30,6 @@ jobs:
           context: .
           push: true
           platforms: linux/arm64
-          tags: ghcr.io/elite-analytics-inc/bedrock-analysis-flights:latest
+          tags: ghcr.io/elite-analytics-inc/bedrock-analysis-polymarket-scan:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
