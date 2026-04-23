@@ -45,7 +45,7 @@ bend means it's accelerating (warming caches).
 
 {% line_chart data="$timeline"
               x="millions"
-              y="elapsed_s"
+              y=["elapsed_s"]
               title="Cumulative elapsed time"
               yAxisTitle="Seconds"
               colors=["#3b82f6"] /%}
@@ -58,7 +58,7 @@ per-file boundaries.
 
 {% line_chart data="$timeline"
               x="millions"
-              y="mrows_per_s"
+              y=["mrows_per_s"]
               title="Cumulative throughput"
               yAxisTitle="M rows / second"
               colors=["#22c55e"] /%}

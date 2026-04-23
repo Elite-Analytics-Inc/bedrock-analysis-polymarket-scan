@@ -123,6 +123,12 @@ def main() -> None:
             ],
         },
     )
+
+    # Upload dashboard/ (markdown + _manifest.json) to R2 so the in-browser
+    # Bedrock Dash renderer at /analysis_runs/<id>/dashboard/index.html can
+    # load it. Without this call, the renderer 404s on _manifest.json.
+    job.write_dashboard_dir()
+
     job.conclusion(
         f"Scanned {rows:,} rows in {elapsed:.1f}s — "
         f"avg throughput {final_mrows_per_s:.2f} M rows/s via Arrow Flight."
