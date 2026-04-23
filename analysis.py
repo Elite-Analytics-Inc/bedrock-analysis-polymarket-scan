@@ -21,11 +21,14 @@ limit (main.rs:57-89 → threads_per_connection = max(cores, 2)). With the
 
 import json
 import os
+import sys
 import time
 
 import pyarrow as pa
 from pyarrow import flight
 
+# bedrock_sdk is COPYed to /bedrock_sdk/ by the Dockerfile; not on sys.path by default.
+sys.path.insert(0, "/")
 from bedrock_sdk import BedrockJob
 
 
